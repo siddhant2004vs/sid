@@ -1,7 +1,4 @@
-📄 README_ButtonLogger.md
-markdown
-Copy
-Edit
+
 # Event-Driven Button Logger with FSM, EEPROM
 
 Description
@@ -24,8 +21,8 @@ yaml
 Copy
 Edit
 
-- **IDLE**: LED is OFF, Button 2 presses ignored.
-- **ACTIVE**: LED blinks every 500ms, Button 2 counts logged.
+IDLE: LED is OFF, Button 2 presses ignored.
+ACTIVE: LED blinks every 500ms, Button 2 counts logged.
 
 ---
 
@@ -42,12 +39,12 @@ Edit
 
 Logic Summary
 
-- **Button 1**: Toggles state between IDLE and ACTIVE.
-- **Button 2**: Only active in ACTIVE state. Each press increments a count.
-- **Debounce**: Ignores noise by waiting 200ms between valid presses.
-- **EEPROM**: Press count is saved and restored even after power off.
-- **Sleep Mode**: When IDLE, system enters deep sleep (SLEEP_FOREVER).
-- **Watchdog Timer**: If system hangs for >2s, it's auto-reset by watchdog.
+- Button 1**: Toggles state between IDLE and ACTIVE.
+- Button 2**: Only active in ACTIVE state. Each press increments a count.
+- Debounce**: Ignores noise by waiting 200ms between valid presses.
+- EEPROM**: Press count is saved and restored even after power off.
+- Sleep Mode**: When IDLE, system enters deep sleep (SLEEP_FOREVER).
+- Watchdog Timer**: If system hangs for >2s, it's auto-reset by watchdog.
 
 Sample Serial Output
 
@@ -69,7 +66,7 @@ Required Libraries
 
 Install this from the Arduino IDE Library Manager:
 
-- **LowPower** by Rocket Scream
+LowPower** by Rocket Scream
 
 ---
  Assumptions
@@ -89,4 +86,4 @@ Limitations
 
 ---
 
-**End of README**
+End of README
