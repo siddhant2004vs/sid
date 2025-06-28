@@ -2,9 +2,9 @@
 markdown
 Copy
 Edit
-# Event-Driven Button Logger with FSM, EEPROM, Deep Sleep, and Watchdog
+# Event-Driven Button Logger with FSM, EEPROM
 
-## 📘 Description
+Description
 
 This embedded system runs on an Arduino Uno. It uses:
 - Interrupts for handling two push buttons.
@@ -16,15 +16,9 @@ This embedded system runs on an Arduino Uno. It uses:
 
 ---
 
-## 🔁 FSM Diagram
+FSM Diagram
+![a28ef98b-0f92-4117-a0ae-517f2cfbe690](https://github.com/user-attachments/assets/4b5329b0-ceb5-43ba-9cfc-0e5c38b5587b)
 
-csharp
-Copy
-Edit
-   [B1 Press]
-IDLE -------------> ACTIVE
-<-------------
-[B1 Press]
 
 yaml
 Copy
@@ -35,7 +29,7 @@ Edit
 
 ---
 
-## 🔌 Pin Mapping
+ Pin Mapping
 
 | Component       | Arduino Pin | Description                     |
 |----------------|-------------|---------------------------------|
@@ -46,7 +40,7 @@ Edit
 
 ---
 
-## ⚙️ Logic Summary
+Logic Summary
 
 - **Button 1**: Toggles state between IDLE and ACTIVE.
 - **Button 2**: Only active in ACTIVE state. Each press increments a count.
@@ -55,9 +49,7 @@ Edit
 - **Sleep Mode**: When IDLE, system enters deep sleep (SLEEP_FOREVER).
 - **Watchdog Timer**: If system hangs for >2s, it's auto-reset by watchdog.
 
----
-
-## 📝 Sample Serial Output
+Sample Serial Output
 
 System Ready. State: IDLE
 Restored Button 2 Count: 4
@@ -73,15 +65,14 @@ Edit
 
 ---
 
-## 📦 Required Libraries
+Required Libraries
 
 Install this from the Arduino IDE Library Manager:
 
 - **LowPower** by Rocket Scream
 
 ---
-
-## ✅ Assumptions
+ Assumptions
 
 - Buttons are active LOW and use internal pull-up resistors.
 - Only INT0 (D2) can wake the device from sleep on Arduino Uno.
@@ -90,7 +81,7 @@ Install this from the Arduino IDE Library Manager:
 
 ---
 
-## ❌ Limitations
+Limitations
 
 - No debounce hardware (pure software debounce).
 - Only one wake source from sleep (B1).
